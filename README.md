@@ -104,15 +104,25 @@ http://localhost:8080
 ### The application includes:
 
 Employee Dashboard
+
 Employee List
+
 Add Employee
+
 Edit Employee
+
 Employee Details
+
 Future Improvements
+
 User authentication and authorization
+
 Role-based access control
+
 Employee profile images
+
 Advanced reporting
+
 REST API support
 
 ## Author
