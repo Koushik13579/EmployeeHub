@@ -63,9 +63,9 @@ employee-management-system
 ├── pom.xml
 └── README.md
 
-**## Setup and Installation**
+## Setup and Installation
 
-**### 1. Clone the repository**
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/Koushik13579/EmployeeHub.git
@@ -77,11 +77,11 @@ Open the project in IntelliJ IDEA.
 CREATE DATABASE employee_management;
 4. Configure the database
 
-**Update the database configuration in:**
+Update the database configuration in:
 
 src/main/resources/application.properties
 
-**Example:**
+Example:
 
 spring.datasource.url=jdbc:mysql://localhost:3306/employee_management
 spring.datasource.username=root
@@ -97,8 +97,8 @@ Set the DB_PASSWORD environment variable with your MySQL password.
 Run the Spring Boot application and open:
 http://localhost:8080
 
-**Screens**
-**The application includes:**
+##Screens
+###The application includes:
 
 Employee Dashboard
 Employee List
@@ -112,5 +112,5 @@ Employee profile images
 Advanced reporting
 REST API support
 
-**Author**
+##Author
 Kowshik
