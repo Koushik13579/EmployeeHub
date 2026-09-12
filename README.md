@@ -62,6 +62,7 @@ employee-management-system
 │
 ├── pom.xml
 └── README.md
+```
 
 ## Setup and Installation
 
@@ -98,8 +99,9 @@ Set the DB_PASSWORD environment variable with your MySQL password.
 Run the Spring Boot application and open:
 http://localhost:8080
 
-##Screens
-###The application includes:
+## Screens
+
+### The application includes:
 
 Employee Dashboard
 Employee List
@@ -113,5 +115,6 @@ Employee profile images
 Advanced reporting
 REST API support
 
-##Author
+## Author
+
 Kowshik
