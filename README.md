@@ -69,13 +69,14 @@ employee-management-system
 
 ```bash
 git clone https://github.com/Koushik13579/EmployeeHub.git
-2. Open the project
+```
+### 2. Open the project
 
 Open the project in IntelliJ IDEA.
 
-3. Create the MySQL database
+### 3. Create the MySQL database
 CREATE DATABASE employee_management;
-4. Configure the database
+### 4. Configure the database
 
 Update the database configuration in:
 
@@ -92,7 +93,7 @@ spring.jpa.show-sql=true
 
 Set the DB_PASSWORD environment variable with your MySQL password.
 
-5. Run the application
+### 5. Run the application
 
 Run the Spring Boot application and open:
 http://localhost:8080
