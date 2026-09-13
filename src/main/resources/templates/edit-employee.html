@@ -128,7 +128,8 @@
                             <label class="form-label">Joining Date</label>
 
                             <input type="date"
-                                   th:field="*{joiningDate}"
+                                   th:value="${#temporals.format(employee.joiningDate, 'yyyy-MM-dd')}"
+                                   name="joiningDate"
                                    class="form-control">
 
                             <div class="text-danger"

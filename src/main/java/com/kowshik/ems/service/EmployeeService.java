@@ -19,7 +19,7 @@ public class EmployeeService {
     }
 
     public List<Employee> getRecentEmployees() {
-        return employeeRepository.findTop5ByOrderByIdDesc();
+        return employeeRepository.findTop5ByOrderByJoiningDateDesc();
     }
 
     // Get all employees

@@ -15,7 +15,7 @@ public interface EmployeeRepository extends JpaRepository<Employee, Long>{
 
     boolean existsByEmailAndIdNot(String email, Long id);
 
-    List<Employee> findTop5ByOrderByIdDesc();
+    List<Employee> findTop5ByOrderByJoiningDateDesc();
 
     Page<Employee> findByDepartment(String department, Pageable pageable);
 
