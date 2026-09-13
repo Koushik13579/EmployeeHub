@@ -31,6 +31,11 @@ public class EmployeeController {
         this.employeeService = employeeService;
     }
 
+    @GetMapping("/")
+    public String home() {
+        return "redirect:/employees";
+    }
+
     @GetMapping("/employees/export")
     public void exportEmployees(HttpServletResponse response) throws IOException {
 
