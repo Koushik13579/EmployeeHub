@@ -2,6 +2,10 @@
 
 EmployeeHub is a web-based Employee Management System built using Spring Boot. It allows users to manage employee information through a simple and responsive interface.
 
+## Live Demo
+
+[EmployeeHub](https://employeehub-w4on.onrender.com)
+
 ## Features
 
 - Add new employees
@@ -10,11 +14,17 @@ EmployeeHub is a web-based Employee Management System built using Spring Boot. I
 - Delete employees
 - Search employees by name or email
 - Filter employees by department
+- Sort employee records
 - Pagination for employee records
 - Employee dashboard
 - Total employee count
 - Department-wise employee statistics
 - Recent employees section
+- CSV export
+- Form validation
+- Duplicate email validation
+- Custom error handling
+- Delete confirmation
 - Responsive user interface
 
 ## Technologies Used
@@ -32,13 +42,15 @@ EmployeeHub is a web-based Employee Management System built using Spring Boot. I
 - Thymeleaf
 
 ### Database
-- MySQL
+- PostgreSQL
 
 ### Tools
 - IntelliJ IDEA
 - Git
 - GitHub
 - Maven
+- Docker
+- Render
 
 ## Project Structure
 
@@ -46,23 +58,36 @@ EmployeeHub is a web-based Employee Management System built using Spring Boot. I
 employee-management-system
 │
 ├── src
-│   ├── main
-│   │   ├── java
-│   │   │   └── com.kowshik.ems
-│   │   │       ├── controller
-│   │   │       ├── model
-│   │   │       ├── repository
-│   │   │       ├── service
-│   │   │       └── EmployeeManagementSystemApplication.java
-│   │   │
-│   │   └── resources
-│   │       ├── static
-│   │       ├── templates
-│   │       └── application.properties
+│   └── main
+│       ├── java
+│       │   └── com.kowshik.ems
+│       │       ├── controller
+│       │       ├── model
+│       │       ├── repository
+│       │       └── service
+│       │
+│       └── resources
+│           ├── static
+│           ├── templates
+│           └── application.properties
 │
 ├── pom.xml
+├── Dockerfile
+├── .dockerignore
 └── README.md
 ```
+
+## Architecture
+
+EmployeeHub follows a layered architecture:
+
+Controller → Service → Repository → PostgreSQL
+
+- **Controller:** Handles HTTP requests and responses
+- **Service:** Contains business logic
+- **Repository:** Handles database operations using Spring Data JPA
+- **Model:** Represents employee data
+- **Thymeleaf:** Renders dynamic HTML pages
 
 ## Setup and Installation
 
@@ -79,51 +104,57 @@ Open the project in IntelliJ IDEA.
 CREATE DATABASE employee_management;
 ### 4. Configure the database
 
-Update the database configuration in:
+The application uses PostgreSQL.
 
-src/main/resources/application.properties
+Set the following environment variables:
 
-Example:
-
-spring.datasource.url=jdbc:mysql://localhost:3306/employee_management
-spring.datasource.username=root
-spring.datasource.password=${DB_PASSWORD}
-
-spring.jpa.hibernate.ddl-auto=update
-spring.jpa.show-sql=true
-
-Set the DB_PASSWORD environment variable with your MySQL password.
+SPRING_DATASOURCE_URL
+SPRING_DATASOURCE_USERNAME
+SPRING_DATASOURCE_PASSWORD
 
 ### 5. Run the application
 
 Run the Spring Boot application and open:
 http://localhost:8080
 
-## Screens
+## Screenshots
 
-### The application includes:
+### Employee Dashboard
 
-Employee Dashboard
+![Employee Dashboard](screenshots/dashboard.png)
 
-Employee List
+### Employee List
 
-Add Employee
+![Employee List](screenshots/employees.png)
 
-Edit Employee
+### Add Employee
 
-Employee Details
+![Add Employee](screenshots/add-employee.png)
 
-Future Improvements
+### Edit Employee
 
-User authentication and authorization
+![Edit Employee](screenshots/edit-employee.png)
 
-Role-based access control
+### Employee Details
 
-Employee profile images
+![Employee Details](screenshots/employee-details.png)
 
-Advanced reporting
+The application includes:
 
-REST API support
+- Employee Dashboard
+- Employee List
+- Add Employee
+- Edit Employee
+- Employee Details
+
+
+## Future Improvements
+
+- User authentication and authorization
+- Role-based access control
+- Employee profile images
+- Advanced reporting
+- REST API support
 
 ## Author
 
