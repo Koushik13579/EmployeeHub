@@ -93,29 +93,42 @@ Controller → Service → Repository → PostgreSQL
 
 ### 1. Clone the repository
 
-```bash
-git clone https://github.com/Koushik13579/EmployeeHub.git
-```
+    git clone https://github.com/Koushik13579/EmployeeHub.git
+    cd EmployeeHub
+
 ### 2. Open the project
 
-Open the project in IntelliJ IDEA.
+Open the project in IntelliJ IDEA and allow Maven to download the required dependencies.
 
-### 3. Create the MySQL database
-CREATE DATABASE employee_management;
-### 4. Configure the database
+### 3. Configure PostgreSQL
 
-The application uses PostgreSQL.
+Create a PostgreSQL database:
 
-Set the following environment variables:
+    CREATE DATABASE employee_management;
 
-SPRING_DATASOURCE_URL
-SPRING_DATASOURCE_USERNAME
-SPRING_DATASOURCE_PASSWORD
+### 4. Configure database environment variables
+
+The application reads database credentials from environment variables.
+
+Set the following variables:
+
+    SPRING_DATASOURCE_URL=jdbc:postgresql://localhost:5432/employee_management
+    SPRING_DATASOURCE_USERNAME=postgres
+    SPRING_DATASOURCE_PASSWORD=your_password
+
+Do not commit your actual database password to GitHub.
 
 ### 5. Run the application
 
-Run the Spring Boot application and open:
-http://localhost:8080
+Run the Spring Boot application from IntelliJ IDEA or using Maven.
+
+On Windows:
+
+    mvnw.cmd spring-boot:run
+
+Then open:
+
+    http://localhost:8080
 
 ## Screenshots
 
